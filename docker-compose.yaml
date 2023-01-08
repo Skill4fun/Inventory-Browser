@@ -37,3 +37,10 @@ services:
     depends_on:
       mongo:
         condition: service_healthy
+  docs:
+    build: docs
+    ports:
+      - 4000:4000
+    volumes:
+      - /app/node_modules
+      - ./docs:/app
