@@ -169,11 +169,11 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 <!-- CONFIGURATION -->
 ## Alkalmazás telepítése és konfigurálása
   
-1. '.env' file-ok létrehozása a '.env.example' alapján a 'backend' és 'frontend' mappában
-2. 'docker compose build' parancs futtatása az applikáció gyökérkönyvtárában, majd
-3. 'docker compose up' paranccsal indítható el az applikáció
-4. a 'backend' gyökér-könyvtárban az - 'npm run loadData' - parancs futtatásával feltölthetjük az adatbázisunkat a termékekkel. (online adatbázisnál 2-3 perc a teljes felöltési idő)
-5. a 'backend' gyökér-könyvtárban az - 'npm run loadArticles' - parancs futtatásával feltölthetjük az adatbázisunkat a promóciós cikkekkel.
+1. `.env` file-ok létrehozása a `.env.example` alapján a `backend` és `frontend` mappában
+2. `docker compose build` parancs futtatása az applikáció gyökérkönyvtárában, majd
+3. `docker compose up` paranccsal indítható el az applikáció
+4. a `backend` gyökér-könyvtárban az - `npm run loadData` - parancs futtatásával feltölthetjük az adatbázisunkat a termékekkel. (online adatbázisnál 2-3 perc a teljes felöltési idő)
+5. a `backend` gyökér-könyvtárban az - `npm run loadArticles` - parancs futtatásával feltölthetjük az adatbázisunkat a promóciós cikkekkel.
 6. Inventory Browser app: http://localhost:3000/
 7. Open API dokumentáció: http://localhost:4000/api-docs
 
