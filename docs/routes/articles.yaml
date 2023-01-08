@@ -1,0 +1,92 @@
+components:
+  schemas:
+    ArticlesResponse:
+      type: object
+      properties:
+        articles:
+          type: Array
+          description: This is an Array that contains all the promo article Objects
+          items:
+            type: Object
+            properties:
+              _id:
+                type: String
+                readOnly: true
+                description: The unique id of each article
+              isActive:
+                type: Boolean
+                description: The title of the article
+              special_price:
+                type: Number
+                description: The special price of the product appearing in the article
+              publish_date:
+                type: Date
+                description: The publication date of the article 
+              expirationDate:
+                type: Date
+                description: The expiration date of the article 
+              productId:
+                type: mongoose.Schema.Types.ObjectId
+                ref: product
+                description: The referenced product data for the article 
+      example:
+          articles:
+              _id: 6277d24527e26d0c02a9e704
+              isActive: true
+              publish_date: 2022-06-14T22:00:00.000Z
+              expirationDate: 2022-09-04T22:00:00.000Z
+              special_price: 41.65
+              productId: 62a7b10b7be043ce443280fc
+    ArticlesDatabaseError:
+      type: object
+      properties:
+        errorcode:
+          type: integer
+          description: The code of the error message
+        errormessage:
+          type: string
+          description: Error message if the connection to mongoDB fails
+      example:
+          errorcode: 500 
+          errormessage: Error occurred while loading the Article database
+    ArticlesServerError:
+      type: object
+      properties:
+        errorcode:
+          type: integer
+          description: The code of the error message
+        errormessage:
+          type: string
+          description: Error message if the connection to the backend server fails
+      example:
+          errorcode: 401 
+          errormessage: NetworkError when attempting to fetch resource.
+
+
+tags:
+  name: Articles
+  description: Promo Articles data managing API
+
+/articles:
+  get:
+    summary: Load promo articles from database
+    tags: [Articles]
+    responses:
+      200:
+        description: Articles are successfully loaded from the database
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticlesResponse'
+      500:
+        description: There was some error connecting to mongoDB
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticlesDatabaseError'
+      401:
+        description: There was some error connecting to the backend server
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArticlesServerError'

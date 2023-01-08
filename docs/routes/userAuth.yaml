@@ -1,0 +1,126 @@
+components:
+  schemas:
+    UserLogin:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          description: The email of the user logging in
+        password:
+          type: string
+          description: The password of the user logging in
+      example:
+        email: johndoe@test.com
+        password: JohnsPassword
+    UserLoginResponse:
+     type: object
+     properties:
+       token:
+         type: string
+         description: JWT token with user data and status
+     example:
+       token: asdaCCAAAAS332fsdfSDFSDfSDSDFSD
+    UserRegistration:
+      type: object
+      required:
+        - name
+        - email
+        - password
+      properties:
+        name:
+          type: string
+          description: The name of the registered user
+        email:
+          type: string
+          description: The email of the registered user
+        password:
+          type: string
+          description: The password of the registered user
+      example:
+        name: John Doe
+        email: johndoe@test.com
+        password: JohnsPassword
+    UserRegistrationResponse:
+     type: object
+     properties:
+       id:
+         type: string
+         description: The id of the new user
+       email:
+         type: string
+         description: The email of the new userstatus
+       isAdmin:
+         type: boolean
+         description: The isAdmin prop of the new userstatus
+       isVerified:
+         type: boolean
+         description: The isVerified of the new userstatus
+     example: {
+       id: "62d60012fc8afbf39d040175",
+       email: "johndoe@test.com",
+       isAdmin: false,
+       isVerified: false,
+     }
+    Error:
+      type: object
+      properties:
+        errormessage:
+          type: string
+          description: Some error
+      example:
+          message: Name, email and password are required.     
+
+tags:
+  name: UserAuth
+  description: User login data managing API
+
+/login:
+  post:
+    summary: User login with email & password
+    tags: [UserAuth]
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserLogin'
+    responses:
+      200:
+        description: The login was successfull
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLoginResponse'
+      400:
+        description: There was an error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+
+/register:
+  post:
+    summary: Create a new registration
+    tags: [UserAuth]
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UserRegistration'
+    responses:
+      200:
+        description: The registration was successfully created, user logged in
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegistrationResponse'
+      400:
+        description: There was an error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'

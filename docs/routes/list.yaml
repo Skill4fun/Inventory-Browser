@@ -1,0 +1,231 @@
+components:
+  schemas:
+    AddListItems:
+      type: object
+      properties:
+        productId:
+          type: string
+          description: The id of the chosen product
+      example:
+        productId: 1
+    AddListItemsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id of the list item
+        status:
+          type: string
+          description: The status of the list item
+        listItemDate:
+          type: date
+          description: The time when the list item was added to the list
+        productId:
+          type: string
+          description: The id of the chosen product
+      example:
+        id: 5,
+        status: pending
+        listItemDate: 2022-06-21
+        productId: 1
+    SaveListResponse:
+      type: object
+      properties:
+        quoteRequests:
+          type: array
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: The unique id of each quoteRequests in database
+              status:
+                type: string
+                description: The status of the list item
+              saveDate:
+                type: string
+                description: The Date when list item saved as quote requests
+              expirationDate:
+                type: date
+                description: The Date till then the quotation is valid
+              productId:
+                type: mongoose.Schema.Types.ObjectId
+                ref: product
+                description: The referenced product data
+      example: 
+        {
+          quoteRequests: [
+            {
+              _id: '627b8aca069d93e828b84de8',
+              userId: 's6das6fas6f76',
+              status: 'saved',
+              productId: '627b8acaoduct3e828b84de8',
+              saveDate: '2022-06-22',
+              expirationDate: '2022-07-22',
+            }
+          ]
+        }
+    RemoveItemsResponse:
+     type: object
+     properties:
+       confirmation:
+         type: string
+         description: Confirmation message after successfull remove
+     example:
+       confirmation: 'List item deleted'
+    ListItemsResponse:
+      type: Object
+      properties:
+        listItems:
+          type: Array
+          description: This is an Array that contains pending status of items
+          items:
+            type: Object
+            properties:
+              id:
+                type: String
+                description: The unique id of each products in database
+              status:
+                type: String
+                description: The status of the list item
+              listItemDate:
+                type: Date
+                description: The Date when list item added to the list
+              productId:
+                type: mongoose.Schema.Types.ObjectId
+                ref: product
+                description: The ID of product 
+      example:
+          listItems:
+              id: 62797f40599225213ed110a5
+              status: pending
+              listItemDate: 2022-06-21
+              productId: 1
+    userId:
+      type: mongoose.Schema.Types.ObjectId
+      ref: user
+      description: Unique id of each user
+      example:
+          628cb71c04f2e6575298b02e 
+    token:
+      type: String
+      description: JWT is an open standard used to share security information between two parties — a client and a server
+      example:
+          Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjhjYjcxYzA0ZjJlNjU3NTI5OGIwMmUiLCJuYW1lIjoiS2lzY2ljYSIsImVtYWlsIjoia2lzY2ljYUBnbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpc1ZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNjUzNDI4MzIxfQ.tjBeQgZYAEziiImYiwKhaBVoMXR6qdc4OaoamdtpPYQ 
+
+
+tags:
+  name: ProductLists
+  description: The quotation request lists managing API
+
+/list/{userId}:
+  post:
+    summary: Add a product to the list
+    tags: [ProductLists]
+    parameters:
+      - in: header
+        name: Authorization
+        required: true
+        schema:
+          type: string
+          description: Bearer <JSON Web Token>
+      - in: path
+        name: userId
+        required: false
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AddListItems'
+    responses:
+      200:
+        description: The product successfully added to the list 
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddListItemsResponse'
+  patch:
+    summary: Saving product lists as quotation request
+    tags: [ProductLists]
+    parameters:
+      - in: header
+        name: Authorization
+        required: true
+        schema:
+          type: string
+          description: Bearer <JSON Web Token>
+      - in: path
+        name: userId
+        required: false
+        schema:
+          type: string
+        description: The auto-generated id of the user
+    responses:
+      200:
+        description: The saving was successfull
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SaveListResponse'
+      400:
+        description: There was an error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+  delete:
+    summary: Remove items from the list
+    tags: [ProductLists]
+    parameters:
+      - in: header
+        name: Authorization
+        required: true
+        schema:
+          type: string
+          description: Bearer <JSON Web Token>
+      - in: path
+        name: orderId
+        required: false
+        schema:
+          type: string
+        description: The auto-generated id of the user
+    responses:
+      200:
+        description: The update was successfull
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RemoveItemsResponse'  
+  get:
+    summary: Get a user ID to load items to the list from the database
+    tags: [ProductLists]
+    parameters:
+      - in: header
+        name: Authorization
+        required: true
+        schema:
+          $ref: '#/components/schemas/token'
+      - in: path
+        name: userId
+        schema:
+          $ref: '#/components/schemas/userId'
+    responses:
+      200:
+        description: List items are successfully loaded from the database
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ListItemsResponse'
+      401:
+        description: There was an error when userId in request.params and the userId in the token not equal
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
+      500:
+        description: There was an error
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'

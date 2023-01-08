@@ -1,0 +1,105 @@
+components:
+  schemas:
+    ProductsResponse:
+      type: object
+      properties:
+        products:
+          type: array
+          description: This is an array that contains all the product Objects
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                readOnly: true
+                description: The unique id of each product
+              factoryProductId:
+                type: string
+                description: The factory ProductId of the product
+              eanCode:
+                type: string
+                description: The eanCode of the product
+              priceExpEur:
+                type: integer
+                description: The Export EUR price of the product
+              brand:
+                type: string
+                description: The brand of the product 
+              nameEn:
+                type: string
+                description: The English name of the product 
+              namePl:
+                type: string
+                description: The Polish name of the product 
+              descEn:
+                type: string
+                description: The English description of the product 
+              descPl:
+                type: string
+                description: The Polish description of the product 
+              weightKgBr:
+                type: integer
+                description: The brutto weight of the product 
+              weightKgNet:
+                type: integer
+                description: The netto weight of the product 
+              unit:
+                type: string
+                description: The unit of the product 
+              qtyAllStock:
+                type: integer
+                description: The full warehouse stocks of the product 
+              qtyReserved:
+                type: integer
+                description: The reserved qtys of the product 
+              qtyAvailable:
+                type: integer
+                description: The for sale available qtys of the product 
+              photoUrl:
+                type: string
+                description: The photo Url of the product 
+              lastUpdated:
+                type: date
+                description: The date of last update of the product 
+      example:
+          products:
+              _id: 627924205e35a93a9f67cb10
+              factoryProductId: VH6060B
+              eanCode: 5552044545684235
+              brand: VARR
+              nameEn: VH6060B RGB Gamer Headphones
+              namePl: Słuchawki dla graczy VH6060B RGB
+              descEn: long description
+              descPl: long description
+              weightKgBr: 0.35
+              weightKgNet: 0.32
+              unit: pcs.
+              qtyAllStock: 12000
+              qtyReserved: 650
+              qtyAvailable: 11350
+              priceExpEur: 9.56
+              photoUrl: http://www.platinet.pl/zdjecia/VH6060B.jpg
+              lastUpdated: 2022-06-16
+
+
+tags:
+  name: Products
+  description: Products data managing API
+
+/products:
+  get:
+    summary: Load products from database
+    tags: [Products]
+    responses:
+      200:
+        description: Products are successfully loaded from the database
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductsResponse'
+      500:
+        description: There was some error connecting to mongoDB
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Error'
