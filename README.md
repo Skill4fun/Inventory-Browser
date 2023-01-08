@@ -5,7 +5,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/green-fox-academy/Skill4fun-Masterwork">
+  <a href="https://github.com/Skill4fun/Inventory-Browser">
   <img src="/docs/icons/LOGO_transparent-background.png" alt="Logo" width="120" height="120">
   </a>
 
@@ -15,14 +15,14 @@
   <p align="center">
     Egy speciális alkalmazás, raktárkészletek böngészésére és hasznos kimutatások, árajánlatok generálására.
     <br />
-    <a href="https://github.com/green-fox-academy/Skill4fun-Masterwork"><strong>Projektmappa felderítése »</strong></a>
+    <a href="https://github.com/Skill4fun/Inventory-Browser"><strong>Projektmappa felderítése »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/green-fox-academy/Skill4fun-Masterwork">Demo megtekintése</a>
+    <a href="https://github.com/Skill4fun/Inventory-Browser">Demo megtekintése</a>
     ·
-    <a href="https://github.com/green-fox-academy/Skill4fun-Masterwork/issues">Hiba bejelentése</a>
+    <a href="https://github.com/Skill4fun/Inventory-Browser/issues">Hiba bejelentése</a>
     ·
-    <a href="https://github.com/green-fox-academy/Skill4fun-Masterwork/issues">Új funkció kérése</a>
+    <a href="https://github.com/Skill4fun/Inventory-Browser/issues">Új funkció kérése</a>
   </p>
 </div>
 
@@ -175,7 +175,7 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 4. a backend gyökér-könyvtárban az - npm run loadData - parancs futtatásával feltölthetjük az adatbázisunkat a termékekkel. (online adatbázisnál 2-3 perc a teljes felöltési idő)
 5. a backend gyökér-könyvtárban az - npm run loadArticles - parancs futtatásával feltölthetjük az adatbázisunkat a promóciós cikkekkel.
 6. Inventory Browser app: http://localhost:3000/
-7. Open API dokumentáció: http://localhost:5500/api-docs/#/
+7. Open API dokumentáció: http://localhost:5500/api-docs
 
 
 <!-- CONTRIBUTING -->
@@ -196,7 +196,7 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 >
 >[![LinkedIn][linkedin-shield]][linkedin-url] [![twitter][twitter-shield]][twitter-url] 
 >
->_Project Link: [https://github.com/green-fox-academy/Skill4fun-Masterwork](https://github.com/green-fox-academy/Skill4fun-Masterwork)_  
+>_Project Link: [https://github.com/Skill4fun/Inventory-Browser](https://github.com/Skill4fun/Inventory-Browser)_  
 >
 >
 ><!-- ACKNOWLEDGMENTS -->
@@ -216,16 +216,16 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/green-fox-academy/Skill4fun-Masterwork.svg
-[contributors-url]: https://github.com/green-fox-academy/Skill4fun-Masterwork/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/green-fox-academy/Skill4fun-Masterwork.svg
-[forks-url]: https://github.com/green-fox-academy/Skill4fun-Masterwork/network/members
-[stars-shield]: https://img.shields.io/github/stars/green-fox-academy/Skill4fun-Masterwork.svg
-[stars-url]: https://github.com/green-fox-academy/Skill4fun-Masterwork/stargazers
-[issues-shield]: https://img.shields.io/github/issues/green-fox-academy/Skill4fun-Masterwork.svg
-[issues-url]: https://github.com/green-fox-academy/Skill4fun-Masterwork/issues
-[license-shield]: https://img.shields.io/github/license/green-fox-academy/Skill4fun-Masterwork.svg
-[license-url]: https://github.com/green-fox-academy/Skill4fun-Masterwork/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Skill4fun/Inventory-Browser.svg
+[contributors-url]: https://github.com/Skill4fun/Inventory-Browser/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Skill4fun/Inventory-Browser.svg
+[forks-url]: https://github.com/Skill4fun/Inventory-Browser/network/members
+[stars-shield]: https://img.shields.io/github/stars/Skill4fun/Inventory-Browser.svg
+[stars-url]: https://github.com/Skill4fun/Inventory-Browser/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Skill4fun/Inventory-Browser.svg
+[issues-url]: https://github.com/Skill4fun/Inventory-Browser/issues
+[license-shield]: https://img.shields.io/github/license/Skill4fun/Inventory-Browser.svg
+[license-url]: https://github.com/Skill4fun/Inventory-Browser/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=logo=linkedin&colorB=0092cc
 [linkedin-url]: https://linkedin.com/in/gergo-almasi
 [product-screenshot]: images/screenshot.png

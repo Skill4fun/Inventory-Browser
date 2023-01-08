@@ -3,7 +3,7 @@ import cors from "cors";
 import swaggerUI from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5500;
 
 const options = {
   definition: {
