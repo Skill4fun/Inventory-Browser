@@ -1,5 +1,4 @@
-
-[Angol nyelvű verzió](/README-en.md)
+[English version](/README-en.md)
 
 
 <!-- PROJECT LOGO -->
@@ -96,10 +95,11 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 >* Regisztrálhat az oldalon  
 >
 >**Regisztrált felhasználó**  
->* Hozzáfér a termékekadatokhoz, használhatja a készlet böngészőt
+>* Hozzáfér a termékadatokhoz, használhatja a készlet böngészőt
 >* Árajánlatbekérő listát készíthet a számára releváns termékekből, de elküldeni még nem tudja
 >* Módosíthatja a saját felhasználói adatait
->Regisztrált és az emailes verifikáción átesett felhasználó:  
+>
+>**Regisztrált és az emailes verifikáción átesett felhasználó**  
 >* Elküldheti az ajánlatigényeit
 >* Megtekintheti a korábban beküldött árajánlatigényeit
 <p align="right">(<a href="#top">Ugrás a tetejére</a>)</p>
@@ -134,8 +134,8 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
     - [ ] Ütemezett vállalati adatbázis kapcsolat xml/csv datafeed-en keresztül
     - [ ] EU Vámtarifa API kapcsolat - termékadatok begyüjtése (termékkategória, vámtarifaszám/EKAER validáció)
     - [ ] EU EPREL API kapcsolat - termékspecifikációk begyüjtése (EPREL termékadatlapok, QR-kód)
-    - [X] Adatbázis frissítése (árak, készletek, temékszortiment)
-- [ ] Kapcsolat felvételi form - felhasználói email küldés az admin részére
+    - [X] Adatbázis frissítése (árak, készletek, termékszortiment)
+- [ ] Kapcsolatfelvételi form - felhasználói email küldés az admin részére
 <p align="right">(<a href="#top">Ugrás a tetejére</a>)</p>
 </details>
 
@@ -172,7 +172,7 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 1. `.env` file-ok létrehozása a `.env.example` alapján a `backend` és `frontend` mappában
 2. `docker compose build` parancs futtatása az applikáció gyökérkönyvtárában, majd
 3. `docker compose up` paranccsal indítható el az applikáció
-4. a `backend` gyökér-könyvtárban az - `npm run loadData` - parancs futtatásával feltölthetjük az adatbázisunkat a termékekkel. (online adatbázisnál 2-3 perc a teljes felöltési idő)
+4. a `backend` gyökér-könyvtárban az - `npm run loadData` - parancs futtatásával feltölthetjük az adatbázisunkat a termékekkel. (online adatbázisnál 2-3 perc a teljes feltöltési idő)
 5. a `backend` gyökér-könyvtárban az - `npm run loadArticles` - parancs futtatásával feltölthetjük az adatbázisunkat a promóciós cikkekkel.
 6. Inventory Browser app: http://localhost:3000/
 7. Open API dokumentáció: http://localhost:4000/api-docs
@@ -181,7 +181,7 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 <!-- CONTRIBUTING -->
 ## Közreműködés
 
-Örömmel fogadok minden közreműködést! Amennyiben van olyan fejlesztési javaslata amit szívesen megosztana velem, kérem, egyszerűen nyisson egy új "issue"-t, írja meg javaslatát és lássa el a „patchrequest” tag-gel, vagy kövesse az alábbiakat:
+Örömmel fogadok minden közreműködést! Amennyiben van olyan fejlesztési javaslata amit szívesen megosztana velem, kérem, egyszerűen nyisson egy új `issue`-t, írja meg javaslatát és lássa el a `patchrequest` tag-gel, vagy kövesse az alábbiakat:
 
 >1. Fork-olja a projektet
 >2. Hozza létre a saját fejlesztési branch-ét (`git checkout -b feature/AmazingFeature`)
