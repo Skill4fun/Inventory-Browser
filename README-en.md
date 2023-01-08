@@ -14,7 +14,7 @@
   <p align="center">
     An App designed to display the current inventory of a company in a browsable, user-friendly manner, generate quotations and useful reports for a variety of purposes.
     <br />
-    <a href="https://github.com/Skill4fun/Inventory-Browser"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Skill4fun/Inventory-Browser"><strong>Explore the project directory »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Skill4fun/Inventory-Browser">View Demo</a>
@@ -180,7 +180,7 @@ _(in accordance with the [roadmap](#roadmap))_
 <!-- CONTRIBUTING -->
 ## Contributing
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag `enhancement`.
 
 >1. Fork the Project
 >2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
