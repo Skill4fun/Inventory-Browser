@@ -151,12 +151,14 @@ _(in accordance with the [roadmap](#roadmap))_
 >* [JSON Web Token](https://jwt.io/)
 >* [Nodemailer](https://nodemailer.com/)
 >* [Docker](https://www.docker.com/)
+>* [Cyclic](https://cyclic.sh//) - backend hosting
 >
 >**Frontend:**  
 >* [React](https://reactjs.org/)
 >* [Semantic UI React](https://react.semantic-ui.com/)
 >* [Styled-components](https://styled-components.com/)
 >* [Docker](https://www.docker.com/)
+>* [Firebase](https://firebase.google.com//) - frontend hosting
 >
 >**Test:**  
 >* [Jest](https://jestjs.io/)
@@ -176,6 +178,19 @@ _(in accordance with the [roadmap](#roadmap))_
 5. use `npm run loadArticles` command in the `backend` root directory, to load our database with some test promotional articles
 6. Inventory Browser app: http://localhost:3000/
 7. Open API dokumentation: http://localhost:4000/api-docs
+
+## Deployment
+
+The hosted Application demo can also be viewed at the public link below:\
+https://inventory-browser.web.app/
+
+>**Login**
+>* Email: _test@test.com_
+>* Password: _12345678_
+>
+>Or you can register your own new user under /register
+
+The backend was deployed on **[Cyclic](https://cyclic.sh/)**, the frontend on **[Firebase](https://firebase.google.com/)**.
 
 <!-- CONTRIBUTING -->
 ## Contributing
