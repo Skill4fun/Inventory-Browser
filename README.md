@@ -185,12 +185,12 @@ A hostolt Applikáció demó az alábbi nyilvános linken is megtekinthető:\
 https://inventory-browser.web.app/
 
 >**Bejelentkezés**
->* Email: test@test.com
->* Password: 12345678
+>* Email: _test@test.com_
+>* Password: _12345678_
 >
->* Vagy akár saját új felhasználót is regisztrálhatunk a /register alatt
+>Vagy akár saját új felhasználót is regisztrálhatunk a /register alatt
 
-A backend **[Cyclic](https://cyclic.sh/)**-re, a frontend **[Firebase](https://firebase.google.com/)**-re deployoltam.
+A backend-et **[Cyclic](https://cyclic.sh/)**-re, a frontend-et **[Firebase](https://firebase.google.com/)**-re deployoltam.
 
 <!-- CONTRIBUTING -->
 ## Közreműködés
