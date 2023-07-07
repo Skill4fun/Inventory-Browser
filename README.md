@@ -151,12 +151,14 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 >* [JSON Web Token](https://jwt.io/)
 >* [Nodemailer](https://nodemailer.com/)
 >* [Docker](https://www.docker.com/)
+>* [Cyclic](https://cyclic.sh//) - backend hosting
 >
 >**Frontend:**  
 >* [React](https://reactjs.org/)
 >* [Semantic UI React](https://react.semantic-ui.com/)
 >* [Styled-components](https://styled-components.com/)
 >* [Docker](https://www.docker.com/)
+>* [Firebase](https://firebase.google.com//) - frontend hosting
 >
 >**Teszt:**  
 >* [Jest](https://jestjs.io/)
@@ -177,6 +179,18 @@ _(az [ütemterv](#ütemterv)-vel összhangban)_
 6. Inventory Browser app: http://localhost:3000/
 7. Open API dokumentáció: http://localhost:4000/api-docs
 
+## Deployment
+
+A hostolt Applikáció demó az alábbi nyilvános linken is megtekinthető:\
+https://inventory-browser.web.app/
+
+>**Bejelentkezés**
+>Email: test@test.com
+>Password: 12345678
+>
+>Vagy akár saját új felhasználót is regisztrálhatunk a /register alatt
+ 
+A backend **[Cyclic](https://cyclic.sh/)**-re, a frontend **[Firebase](https://firebase.google.com/)**-re deployoltam.
 
 <!-- CONTRIBUTING -->
 ## Közreműködés
