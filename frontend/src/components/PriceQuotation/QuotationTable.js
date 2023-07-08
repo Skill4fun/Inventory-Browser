@@ -79,7 +79,7 @@ export default function QuotationTable() {
         <Table.Body>
           {!error
             ? (quoteRequests?.map((item) => (
-              <Table.Row onClick={() => handleClick(item.product)} key={item.id}>
+              <Table.Row onClick={() => handleClick(item.product)} key={item.id} style={{ cursor: 'zoom-in' }}>
                 <Table.Cell>
                   {item.product.factoryProductId}
                 </Table.Cell>

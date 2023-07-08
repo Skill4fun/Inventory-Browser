@@ -231,7 +231,7 @@ export default function BrowserTable({ getProductsFn = getProducts }) {
         <Table.Body>
           {
             data?.map((product) => (
-              <Table.Row key={product.factoryProductId}>
+              <Table.Row key={product.factoryProductId} style={{ cursor: 'pointer' }}>
                 <Table.Cell
                   onClick={() => { handleOnProductClick(product._id, loggedInUser.userId); }}
                 >
@@ -262,6 +262,7 @@ export default function BrowserTable({ getProductsFn = getProducts }) {
                 </Table.Cell>
                 <Table.Cell>
                   <Image
+                    style={{ cursor: 'zoom-in' }}
                     src={product.photoUrl}
                     onClick={() => handleOnImgClick(product)}
                     rounded

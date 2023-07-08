@@ -46,6 +46,7 @@ export default function Article({
       minHeight: '20vh',
       minWidth: '340px',
       maxWidth: '30vw',
+      cursor: 'zoom-in',
     };
   }
 

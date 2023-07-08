@@ -124,7 +124,7 @@ export default function ListTable({ listItemsContextFn = useListItemsContext }) 
               </Table.Header>
               <Table.Body>
                 {listItems?.map((item) => (
-                  <Table.Row key={item.id}>
+                  <Table.Row key={item.id} style={{ cursor: 'zoom-in' }}>
                     <Table.Cell onClick={() => handleClick(item)}>
                       {item.factoryProductId}
                     </Table.Cell>

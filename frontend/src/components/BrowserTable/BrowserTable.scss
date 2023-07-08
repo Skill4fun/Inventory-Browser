@@ -1,0 +1,13 @@
+.custom-cursor::before {
+  content: "add";
+  pointer-events: none;
+  /* Prevents the pseudo-element from blocking interactions */
+  opacity: 0;
+  /* Initially hide the text */
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor:hover::before {
+  opacity: 1;
+  /* Show the text on hover */
+}
