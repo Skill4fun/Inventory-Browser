@@ -43,6 +43,7 @@
       </ul>
     </li>
     <li><a href="#configuration">Configuration</a></li>
+    <li><a href="#deployment">Deployment/Hosting</a></li>
     <li><a href="#contribution">Contribution</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>

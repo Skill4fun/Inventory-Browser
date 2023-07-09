@@ -43,6 +43,7 @@
       </ul>
     </li>
     <li><a href="#alkalmazás-telepítése-és-konfigurálása">Alkalmazás telepítése és konfigurálása</a></li>
+    <li><a href="#deployment">Deployment/Hosting</a></li>
     <li><a href="#közreműködés">Közreműködés</a></li>
     <li><a href="#kapcsolat">Kapcsolat</a></li>
     <li><a href="#köszönet-az-alábbi-tartalmakért-melyek-segítségemre-voltak-a-fejlesztés-során">Hasznos linkek</a></li>
