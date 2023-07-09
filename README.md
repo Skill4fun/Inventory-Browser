@@ -17,7 +17,7 @@
     <a href="https://github.com/Skill4fun/Inventory-Browser"><strong>Projektmappa felderítése »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Skill4fun/Inventory-Browser">Demo megtekintése</a>
+    <a href="#deployment">Demo megtekintése</a>
     ·
     <a href="https://github.com/Skill4fun/Inventory-Browser/issues">Hiba bejelentése</a>
     ·

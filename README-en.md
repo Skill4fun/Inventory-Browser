@@ -17,7 +17,7 @@
     <a href="https://github.com/Skill4fun/Inventory-Browser"><strong>Explore the project directory »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Skill4fun/Inventory-Browser">View Demo</a>
+    <a href="#deployment">View Demo</a>
     ·
     <a href="https://github.com/Skill4fun/Inventory-Browser/issues">Report Bug</a>
     ·
